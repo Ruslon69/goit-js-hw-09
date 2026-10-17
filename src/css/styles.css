@@ -6,5 +6,154 @@
 
 body {
   margin: 0;
+  padding: 24px;
+  color: #2e2f42;
+  background-color: #fff;
   font-family: system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  color: #4e75ff;
+}
+
+a:hover,
+a:focus-visible {
+  color: #6c8cff;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1128px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery-item {
+  flex-basis: calc((100% - 48px) / 3);
+  min-width: 0;
+}
+
+.gallery-link {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 200ms ease;
+}
+
+.gallery-link:hover .gallery-image,
+.gallery-link:focus-visible .gallery-image {
+  transform: scale(1.04);
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 408px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #fff;
+  letter-spacing: 0.04em;
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.feedback-form input {
+  height: 40px;
+}
+
+.feedback-form textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border-color: #000;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #4e75ff;
+  outline: 1px solid #4e75ff;
+}
+
+.feedback-form button {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #4e75ff;
+  font: inherit;
+  font-weight: 500;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+
+.feedback-form button:hover {
+  background-color: #6c8cff;
+}
+
+.feedback-form button:focus-visible {
+  outline: 2px solid #2e2f42;
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  .gallery-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+@media (max-width: 479px) {
+  .gallery-item {
+    flex-basis: 100%;
+  }
 }
